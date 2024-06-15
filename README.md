@@ -1,4 +1,4 @@
-![icon_logo](https://as1.ftcdn.net/v2/jpg/05/39/91/80/1000_F_539918053_w2wpS5DMYWIRr75fHdTMZtfCtHykIfGR.jpg)
+![Screenshot 2024-06-15 234459](https://github.com/yashpawar2108/IITGCodingClubProject/assets/170320077/431b021e-6ae5-47c2-8c4e-615372ab5432)
 
 
 
