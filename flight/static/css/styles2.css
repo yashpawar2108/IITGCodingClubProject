@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+    background-color: #121212; /* Dark background for body */
+    color: #e0e0e0; /* Light text color for readability */
+    word-wrap: break-word;
+}
+
+/* Container */
+.container {
+    cursor: pointer;
+}
+
+/* Each Booking Div */
+.each-booking-div {
+    width: 100%; /* Full width */
+    margin: 5px auto 8px auto;
+    transition-duration: 0.4s;
+    padding: 10px 15px;
+    background-color: #333; /* Darker background for booking div */
+    border: 1px solid #444; /* Darker border */
+    border-radius: 5px;
+    color: #e0e0e0; /* Light text color */
+}
+
+.each-booking-div:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); /* Light shadow on hover */
+    border-color: #555; /* Lighter border on hover */
+    background-color: #3a3a3a; /* Slightly lighter background on hover */
+}
+
+/* Form Control Focus */
+.form-control:focus {
+    box-shadow: 0 0 0 0.03rem rgba(255, 69, 100, .25); /* Soft pink shadow */
+    border-color: rgb(255, 69, 100); /* Light red border on focus */
+}
+
+/* Buttons */
+.btn, .btn:focus, .btn:active {
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
+
+.btn {
+    color: white;
+    background-color: #555; /* Dark background for buttons */
+    border-radius: 999px; /* Fully rounded buttons */
+    width: 100%; /* Full width buttons */
+    padding: 10px 0; /* Padding for better look */
+    border: none; /* Remove default border */
+    text-align: center;
+    transition: background-color 0.2s ease, color 0.2s ease; /* Smooth transitions */
+}
+
+.btn:hover, .btn:focus, .btn:active {
+    background-color: #666; /* Slightly lighter on hover */
+}
+
+/* Star */
+.star {
+    color: #ff4444; /* Bright red for dark theme */
+}
+
+/* User Box */
+.user-box {
+    background-color: #1e1e1e; /* Darker background for user box */
+    width: 100%; /* Full width */
+    border-radius: 5px;
+    margin-top: 10vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px; /* Padding for better spacing */
+    color: #e0e0e0; /* Light text color */
+}
+
+.user-box form > div {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/* Custom File Label */
+.custom-file-label {
+    overflow: hidden;
+    color: #e0e0e0; /* Light text color */
+    background-color: #2a2a2a; /* Darker background */
+    border: 1px solid #444; /* Subtle border */
+    border-radius: 5px;
+    padding: 10px; /* Padding for better look */
+}
+
+/* Small Text */
+.small {
+    font-size: small;
+    color: #b0b0b0; /* Lighter grey for subtle text */
+}
+
+/* Popups */
+.popup {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker overlay */
+    z-index: 9999999;
+}
+
+.popup-actions {
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.popup .btn {
+    padding: 7px 13px;
+    background-color: #444; /* Dark background for buttons in popup */
+    color: #f5f5f5; /* Light text color */
+}
+
+.small-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222; /* Darker background for popup */
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
+    overflow: auto;
+    border-radius: 10px;
+    color: #f5f5f5; /* Light text color */
+}
+
+/* Responsive Styles */
+@media (max-width: 376px) {
+    .popup-actions {
+        padding: 0;
+    }
+
+    .small-popup {
+        width: 80%;
+    }
+
+    .each-booking-div {
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .each-booking-div {
+        display: block;
+    }
+
+    .each-booking-div > div {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .each-booking-div > div > div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .places-div,
+    .status-div,
+    .booking-date-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .middle-div {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .last-div {
+        margin-top: 5px;
+    }
+}
+
+/* Additional Styles for Ticket Actions */
+.ticket-action-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pbtn, .rbtn {
+    border: 0;
+}
+
+.cbtn:hover, .cbtn:focus, .cbtn:active {
+    color: #dc3545 !important; /* Red color on hover */
+}
+
+.pbtn:hover, .pbtn:focus, .pbtn:active {
+    color: #17a2b8 !important; /* Cyan color on hover */
+}
+
+.rbtn:hover, .rbtn:focus, .rbtn:active {
+    color: #007bff !important; /* Blue color on hover */
+}
+
+/* Adjusting Scrollbar for Dark Theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Dark scrollbar thumb */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1e1e1e; /* Dark scrollbar track */
+}

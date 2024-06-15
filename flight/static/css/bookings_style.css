@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;  /* Dark background for the body */
+    color: #f5f5f5;  /* Light text for better readability */
+    word-wrap: break-word;
+}
+
+.container {
+    cursor: pointer;
+}
+
+.each-booking-div {
+    width: 96%;
+    margin: 5px auto 8px auto;
+    transition-duration: 0.4s;
+    padding: 10px 15px;
+    background-color: #333;  /* Darker background for booking div */
+    border: 1px solid #444;  /* Darker border */
+    border-radius: 5px;
+    color: #f5f5f5;  /* Light text color */
+}
+
+.each-booking-div:hover {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.1);  /* Light shadow on hover */
+    border-color: #555;  /* Lighter border on hover */
+    background-color: #3a3a3a;  /* Slightly lighter background on hover */
+}
+
+.btnp {
+    padding: 0.15rem 0.6rem;
+    font-size: 0.9em;
+    margin-top: 3px;
+    margin-bottom: 5px;
+    background-color: #555;  /* Dark background for buttons */
+    color: #f5f5f5;  /* Light text color */
+    border-radius: 3px;
+}
+
+.btnp:hover, .btnp:focus, .btnp:active {
+    background-color: #666;  /* Slightly lighter on hover */
+}
+
+.each-booking-div > div {
+    display: flex;
+    overflow: auto;
+}
+
+.each-booking-div > div > div {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 100%;
+}
+
+.green, .red, .orange {
+    border-radius: 3px;
+    color: #fff;
+    padding: 0 5px;
+    font-size: 0.7em;
+}
+
+.green {
+    background-color: #28a745;  /* Light green for dark theme */
+}
+
+.red {
+    background-color: #dc3545;  /* Bright red for dark theme */
+}
+
+.orange {
+    background-color: #ff9800;  /* Bright orange for dark theme */
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);  /* Darker overlay */
+    z-index: 9999999;
+}
+
+.popup-actions {
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.popup .btn {
+    padding: 7px 13px;
+    background-color: #444;  /* Dark background for buttons in popup */
+    color: #f5f5f5;  /* Light text color */
+}
+
+.small-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;  /* Darker background for popup */
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px;
+    overflow: auto;
+    border-radius: 10px;
+    color: #f5f5f5;  /* Light text color */
+}
+
+@media (max-width: 376px) {
+    .popup-actions {
+        padding: 0;
+    }
+
+    .small-popup {
+        width: 80%;
+    }
+
+    .each-booking-div {
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .each-booking-div {
+        display: block;
+    }
+
+    .each-booking-div > div {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .each-booking-div > div > div {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .places-div,
+    .status-div,
+    .booking-date-div {
+        display: flex;
+        justify-content: center;
+    }
+
+    .middle-div {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .last-div {
+        margin-top: 5px;
+    }
+}
+
+.ticket-action-div {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pbtn, .rbtn {
+    border: 0;
+}
+
+.cbtn:hover, .cbtn:focus, .cbtn:active {
+    color: #dc3545 !important;
+}
+
+.pbtn:hover, .pbtn:focus, .pbtn:active {
+    color: #17a2b8 !important;
+}
+
+.rbtn:hover, .rbtn:focus, .rbtn:active {
+    color: #007bff !important;
+}

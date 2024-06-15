@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* General Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* Section 1 Styling */
+.section1 {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+.white {
+    color: white;
+    font-size: 18px;
+}
+
+.white-2 {
+    font-size: 14px;
+}
+
+.v-line {
+    border-left: 1px dashed rgba(255, 255, 255, .9);
+    height: 100%;
+    margin: 0 15px;
+}
+
+.small-label {
+    font-size: 12px;
+    color: #f0f0f0;
+}
+
+/* Query Data Div */
+.query-data-div, .query-data-div2 {
+    min-height: 11vh;
+    background-color: #8B0000;
+    background-image: linear-gradient(135deg, #8B0000, #b8017b);
+    display: flex;
+}
+
+.query-data-div2 {
+    display: none;
+}
+
+.query-data-div > .container, .query-data-div2 > .container {
+    display: flex;
+    height: 90%;
+    margin: auto 0;
+    border-radius: 8px;
+}
+
+.query-data-div > .container > div, .query-data-div2 > .container > div {
+    margin: auto;
+    display: flex;
+}
+
+.trip-filter {
+    width: 15%;
+    display: flex;
+}
+
+.trip-data {
+    width: 70%;
+}
+
+.trip-modify {
+    width: 15%;
+    display: flex;
+    align-items: center;
+}
+
+.trip-modify form {
+    margin: 0;
+}
+
+.trip-modify button {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.trip-modify button:hover {
+    background-color: white;
+    color: crimson;
+}
+
+/* Query Result Div */
+.query-result-div, .query-result-div-2 {
+    flex: 1;
+    background-color: #1e1e1e;
+    display: flex;
+    animation: appear 0.4s forwards ease-in-out;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Filter Section */
+.filter-div {
+    padding: 15px;
+    background-color: #2b2b2b;
+    color: #f5f5f5;
+}
+
+.actual-result-div {
+    flex: 1;
+    padding: 20px 35px;
+    background-color: #1e1e1e;
+}
+
+.filter-box > div {
+    margin: 10px 0;
+}
+
+.filter-div h4 {
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #f5f5f5;
+    margin: 10px 0;
+}
+
+.square-box {
+    width: 23%;
+    font-size: 12px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+    transition: background-color 0.2s, color 0.2s;
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+.square-box:hover {
+    background-color: #0075ff;
+    color: white;
+}
+
+.square-box.active {
+    background-color: #0075ff;
+    color: white;
+}
+
+.filter-img-div {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    outline: none;
+    color: #0075ff;
+    cursor: pointer;
+}
+
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active {
+    text-decoration: none;
+}
+
+/* Each Flight Div */
+.each-flight-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    margin-top: 10px;
+    background-color: #2b2b2b;
+}
+
+.each-flight-div-box {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    margin-top: 10px;
+    background-color: #2b2b2b;
+}
+
+.company-details {
+    padding: 0 10px;
+}
+
+.company-name {
+    font-weight: bold;
+    color: #ffd700;
+}
+
+.plane-name {
+    font-size: 12px;
+    color: #bbb;
+}
+
+.flight-time {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.flight-place {
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+}
+
+.flight-price {
+    display: flex;
+    align-items: center;
+}
+
+.flight-price h5 {
+    font-weight: 600;
+    margin: 0;
+    color: #ffd700;
+}
+
+/* Tooltip */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, .8);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 4px 7px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9em;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Responsive Design */
+@media (max-width: 376px) {
+    .section1 {
+        font-size: 1em;
+    }
+
+    .query-data-div .container,
+    .query-data-div2 .container {
+        display: block;
+        padding: 0;
+    }
+
+    .trip-places > div,
+    .trip-time > div,
+    .trip-class,
+    .trip-modify {
+        padding: 0;
+        width: 100%;
+        margin-bottom: 7px !important;
+    }
+
+    .trip-places > .from-div,
+    .trip-places > .to-div {
+        width: 45%;
+        text-align: center;
+    }
+
+    .query-data-div .trip-time {
+        justify-content: space-between;
+    }
+
+    .query-data-div .trip-time > div {
+        width: 40%;
+        text-align: center;
+    }
+
+    .trip-class,
+    .trip-modify {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .spl-btn {
+        padding: 8px;
+    }
+}
+
+/* Custom Tabs */
+.tabs {
+    margin-top: 50px;
+    font-size: 15px;
+    padding: 0;
+    list-style: none;
+    background: #1e1e1e;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+}
+
+.tabs a {
+    text-decoration: none;
+    color: #777;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    display: inline-block;
+    position: relative;
+    transition-duration: 0.6s;
+}
+
+.tabs a.active-div {
+    color: #fff;
+}
+
+.tabs a i {
+    margin-right: 5px;
+}
+
+.tabs .selector {
+    height: 100%;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50px;
+    transition-duration: 0.6s;
+    transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    background: linear-gradient(45deg, crimson 0%, #b80190 100%);
+}
+
+/* Selection Div */
+.selection-div {
+    position: fixed;
+    z-index: 99;
+    background-image: linear-gradient(135deg, rgba(220, 20, 60, .85), rgba(184, 1, 123, .85));
+    height: 10%;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    display: flex;
+    color: white;
+    justify-content: space-evenly;
+}
+
+.selection-div > div {}

@@ -1,0 +1,9 @@
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    font-size: 40px;
+    color: #d4d4d4; /* Light gray to contrast with dark background */
+    line-height: 1.2; /* Maintains readability */
+    text-align: center; /* Center align the text */
+}

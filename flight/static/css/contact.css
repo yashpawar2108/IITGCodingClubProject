@@ -1,0 +1,83 @@
+.contact-form-box {
+    width: 100%;
+    height: 100%;
+    background-color: #222;
+    padding: 30px 25px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0px 0px 18px rgba(35, 37, 89, 0.3);
+    color: #fff; /* Adjusted text color to white */
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.2); /* Adjusted text shadow */
+    font-size: 40px;
+    color: #fff; /* Adjusted text color to white */
+}
+
+section {
+    background-color: rgba(10, 0, 0, 0.05);
+}
+
+input,
+textarea {
+    outline: none;
+    border: 1px solid #444; /* Adjusted input and textarea border color */
+    color: #ccc; /* Adjusted input and textarea text color */
+    border-radius: 6px;
+    height: 56px;
+    width: 100%;
+    font-size: 20px;
+    padding: 10px !important;
+    background-color: #333; /* Adjusted input and textarea background color */
+}
+
+input:focus,
+textarea:focus {
+    box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.1); /* Adjusted focus box shadow */
+    border: 1.5px solid #f0f0f0; /* Adjusted focus border color */
+    transition-property: border-width;
+    transition-duration: 100ms;
+}
+
+textarea {
+    font-size: larger;
+    height: 150px;
+}
+
+button {
+    font-size: medium;
+    padding: 7px 13px !important;
+    width: auto;
+    height: auto;
+    background-color: #444; /* Adjusted button background color */
+    color: #fff; /* Adjusted button text color */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555; /* Adjusted button hover background color */
+}
+
+.top-left-section {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+.bbc {
+    padding: 20px 30px 20px 5px;
+}
+
+.row-fluid {
+    margin: 16px 0;
+}
+
+.row-fluid a {
+    color: rgba(255, 255, 255, 0.9) !important; /* Adjusted link color */
+}
